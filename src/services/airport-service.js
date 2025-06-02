@@ -1,15 +1,10 @@
 const { AirportRepository } = require("../repository/index");
+const CrudService = require("./crud-service");
 
-class AirportService {
+class AirportService extends CrudService {
   constructor() {
-    this.AirportRepository = new AirportRepository();
-  }
-  async createAirport(name, cityId) {
-    try {
-      await this.AirportRepository.createAirport({ name, cityId });
-    } catch (error) {
-      throw error;
-    }
+    const airportRepository = new AirportRepository();
+    super(airportRepository);
   }
 }
 

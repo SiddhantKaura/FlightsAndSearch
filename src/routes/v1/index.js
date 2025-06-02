@@ -13,7 +13,7 @@ router.get('/city/:id', CityController.get);
 router.get('/cities', CityController.getAll);
 router.post('/cities', CityController.createAll);
 
-router.post('/airport', AirportController.create);
+router.post('/airports', AirportController.create);
 // create airport ~ name, cityId, 
 // update airport ~ name
 // delete airport ~ should get unlinked from the city
